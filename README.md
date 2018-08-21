@@ -9,7 +9,3 @@ En las apps que usan servicios con llamadas http app.module hay que importar el 
 En las que utilizan formularios hay que agregar las dependecias a como esta en el app de formularios
 
 Para proyectos como el app de youtube agregar un key al local storage asi: localStorage.setItem("youtube-api-key","my-youtube-api-key")
-
-## Diploma del curso
-
-https://udemy-certificate.s3.amazonaws.com/pdf/UC-KOQCBWOR.pdf
