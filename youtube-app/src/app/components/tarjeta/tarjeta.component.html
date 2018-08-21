@@ -1,0 +1,9 @@
+<div class="card-columns">
+  <div class="card" *ngFor="let video of videos">
+    <img class="card-img-top" [src]="video.thumbnails.high.url" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{video.title}}</h5>
+      <button type="button" class="btn btn-outline-primary btn-block" (click)="verVideo(video)">Ver video</button>
+    </div>
+  </div>
+</div>

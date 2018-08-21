@@ -1,0 +1,98 @@
+<div id="app-component">
+  <h1>Pipes</h1>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Variable</th>
+        <th scope="col">Pipe</th>
+        <th scope="col">Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{nombre}}</td>
+        <td>uppercase</td>
+        <td>{{nombre | uppercase}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre}}</td>
+        <td>lowercase</td>
+        <td>{{nombre | lowercase}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre}}</td>
+        <td>slice:3</td>
+        <td>{{nombre | slice:3}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre}}</td>
+        <td>slice:0:3</td>
+        <td>{{nombre | slice:0:3}}</td>
+      </tr>
+      <tr>
+        <td>{{arr}}</td>
+        <td>slice:1:5</td>
+        <td>{{arr | slice:1:5}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>Un numero entero cero como minimo en parte decimal, dos como maximo</td>
+        <td>{{PI | number:'1.0-2'}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>3 numeros enteros</td>
+        <td>{{PI | number:'3.0-0'}}</td>
+      </tr>
+      <tr>
+        <td>{{a}}</td>
+        <td>pipe de porcentaje 2 numeros parte entera 1 minimo decimal 1 maximo decimal</td>
+        <td>{{a | percent:'2.1-1'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>pipe de moneda por defecto</td>
+        <td>{{salario | currency}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>pipe de moneda colones mostranto la parte entera y 2 decimales como minimo y maximo</td>
+        <td>{{salario | currency:'CRC':'symbol-narrow':'.1-1'}}</td>
+      </tr>
+      <tr>
+        <td>{{valorDePromesa}}</td>
+        <td>async</td>
+        <td>{{valorDePromesa | async}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>fecha</td>
+        <td>{{fecha | date}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre2}}</td>
+        <td>capitalizado</td>
+        <td>{{nombre2 | capitalizeText}}</td>
+      </tr>
+      <tr>
+        <td>{{activar}}</td>
+        <td>
+          <button (click)="toggleActivar();" type="button" class="btn btn-outline-primary">Activar/Desactivar</button>
+        </td>
+        <td>{{nombre2 | asteriscos:activar}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h4>Slice en ng for</h4>
+  <ul>
+    <li *ngFor="let item of arr | slice:5:20">{{item}}</li>
+  </ul>
+  <h4>Pipe de json</h4>
+  <pre>  {{heroe | json}}</pre>
+  <!-- ejemplo de video desde youtube con carga de url seguro
+  <pre>
+  <h4>Youtube video</h4>
+  <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </pre>
+-->
+</div>

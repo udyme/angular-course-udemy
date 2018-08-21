@@ -1,0 +1,9 @@
+<div style="display: block;margin-bottom: 20px;">
+  <canvas baseChart
+          [data]="polarAreaChartData"
+          [labels]="polarAreaChartLabels"
+          [legend]="polarAreaLegend"
+          [chartType]="polarAreaChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>

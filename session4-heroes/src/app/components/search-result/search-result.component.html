@@ -1,0 +1,14 @@
+<div class="search-result">
+  <h1>Resultados de busqueda:
+    <small>{{termino}}</small>
+  </h1>
+  <div class="row" *ngIf="!heroes.length">
+    <div class="col-md-12"></div>
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el termino {{termino}}
+    </div>
+  </div>
+  <div class="card-columns">
+   <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.id" *ngFor="let heroe of heroes;"></app-heroe-tarjeta>
+  </div>
+</div>

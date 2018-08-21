@@ -1,0 +1,11 @@
+<div class="container main-container">
+  <h1>
+    Canal de youtube
+  </h1>
+  <hr>
+  <app-tarjeta [videos]="videos" (onVerVideo)="verVideo($event);"></app-tarjeta>
+  <button (click)="cargarMas()" class="btn btn-outline-primary btn-block">
+    Cargar mas videos
+  </button>
+  <app-modal [video]="videoSeleccionado" (onCerrarModal)="cerrarModal()"></app-modal>
+</div>

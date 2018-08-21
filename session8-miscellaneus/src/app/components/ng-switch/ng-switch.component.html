@@ -1,0 +1,32 @@
+<div [ngSwitch]="alerta">
+  <span *ngSwitchCase="'success'">
+    <div class="alert alert-success" role="alert">
+      A simple success alert—check it out!
+    </div>
+  </span>
+  <span *ngSwitchCase="'warning'">
+    <div class="alert alert-warning" role="alert">
+      A simple success alert—check it out!
+    </div>
+  </span>
+  <ng-container *ngSwitchCase="'danger'">
+    <div class="alert alert-danger" role="alert">
+      A simple success alert—check it out!
+    </div>
+  </ng-container>
+  <span *ngSwitchDefault>
+    <div class="alert alert-dark" role="alert">
+     {{alerta}}
+    </div>
+  </span>
+</div>
+
+<select  class="form-control"  #selectel>
+  <option value="success">Success</option>
+  <option value="warning">warning</option>
+  <option value="danger">danger</option>
+  <option value="dark">default</option>
+</select>
+
+<button type="button" class="btn btn-primary" (click)="alerta=selectel.value">Cambiar</button>
+

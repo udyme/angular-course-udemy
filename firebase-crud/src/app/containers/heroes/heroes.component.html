@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Heroes</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-right">
+        <button [routerLink]="['/heroe','nuevo']" class="btn btn-outline-primary" type="button" name="button">
+          Nuevo heroe
+        </button>
+      </div>
+    </div>
+    <div class="row animated fadeIn fast">
+      <div class="col-md-12">
+        <ng-container *ngIf="loading; then thenTemplate; else elseTemplate"></ng-container>
+        <ng-template #thenTemplate>
+          <div class="alert alert-info" role="alert">
+            Cargando por favor espere
+          </div>
+        </ng-template>
+        <ng-template #elseTemplate>
+          <ng-container *ngIf="!(heroes | keys).length; else elseTemplate">
+            <div class="alert alert-info" role="alert">
+              No hay registros que mostrar
+            </div>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <app-heroes-table (onDeleteRow)="borrarHeroe($event)" [heroes]="heroes"></app-heroes-table>
+          </ng-template>
+        </ng-template>
+      </div>
+    </div>
+    <!--<div class="row">
+      <div class="col-md-12">
+        <pre>
+          {{heroes | json}}
+        </pre>
+      </div>
+    </div>-->
+  </div>
+</div>
+<app-modal-yes-no message="Desea eliminar el registro ?" title="Registro de Eduardo"></app-modal-yes-no>

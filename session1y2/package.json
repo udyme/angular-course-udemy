@@ -1,0 +1,12 @@
+{
+  "name": "ts-ejemplo1",
+  "version": "1.0.0",
+  "description": "Ejemplos de TypesScript",
+  "main": "app.js",
+  "scripts": {
+    "decorator":"tsc && static -p 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Carrillo",
+  "license": "MTI"
+}
