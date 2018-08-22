@@ -1,7 +1,7 @@
 
 // Uso de Let y Const
-let nombre2:string = "Ricardo Tapia";
-let edad2:number = 23;
+let nombre2:string = "Alex Pariona";
+let edad2:number = 55;
 
 const PERSONAJE = {
   nombre: nombre,
@@ -15,7 +15,7 @@ interface IAvenger {
 
 // Cree una interfaz que sirva para validar el siguiente objeto
 var batman:IAvenger = {
-  nombre: "Bruno Díaz",
+  nombre: "killua zoldick",
   artesMarciales: ["Karate", "Aikido", "Wing Chun", "Jiu-Jitsu"]
 }
 
